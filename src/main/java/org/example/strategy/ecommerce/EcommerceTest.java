@@ -8,7 +8,8 @@ import java.util.Map;
 
 public class EcommerceTest {
   private static Map<Integer, Integer> priceOnProducts = new HashMap<>();
-  private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+  private static BufferedReader reader = new BufferedReader(
+          new InputStreamReader(System.in));
   private static Order order = new Order();
   private static PayStrategy strategy;
 
