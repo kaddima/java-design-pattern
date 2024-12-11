@@ -2,11 +2,20 @@ package org.example.decorator.encoding;
 
 public class EncodingTest {
   public static void main(String[] args) {
-    DataSource ds = new FileDataSource("test.txt");
-    //System.out.println(ds.readData());
+    String salaryRecords = "Name,Salary\nJohn Smith,100000\nSteven Jobs,912000";
+    DataSourceDecorator encoded = new CompressionDecorator(
+            new EncryptionDecorator(
+                    new FileDataSource("test.txt")));
+    encoded.writeData(salaryRecords);
 
-    EncryptionDecorator en = new EncryptionDecorator(ds);
-    System.out.println(en.encode("th"));
+    DataSource plain = new FileDataSource("test.txt");
+
+    System.out.println("- Input ----------------");
+    System.out.println(salaryRecords);
+    System.out.println("- Encoded --------------");
+    System.out.println(plain.readData());
+    System.out.println("- Decoded --------------");
+    System.out.println(encoded.readData());
   }
 
 }
