@@ -1,5 +1,10 @@
-package org.example.singleton.single_thread;
-
+package org.example.singleton;
+/**
+ * The same class behaves incorrectly in a multithreaded
+ * environment. Multiple threads can call the creation
+ * method simultaneously and get several instances of
+ * Singleton class.
+ * */
 public class Singleton {
   private static Singleton instance;
   public String value;
