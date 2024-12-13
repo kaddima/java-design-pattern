@@ -1,4 +1,4 @@
-package org.example.singleton;
+package org.example.singleton.example1;
 /**
  * The same class behaves incorrectly in a multithreaded
  * environment. Multiple threads can call the creation

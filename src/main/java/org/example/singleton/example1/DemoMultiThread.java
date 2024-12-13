@@ -1,4 +1,4 @@
-package org.example.singleton;
+package org.example.singleton.example1;
 
 public class DemoMultiThread {
   public static void main(String[] args) {

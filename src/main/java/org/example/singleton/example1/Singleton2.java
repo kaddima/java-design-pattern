@@ -1,4 +1,4 @@
-package org.example.singleton;
+package org.example.singleton.example1;
 /**
  * To fix the problem, you have to synchronize threads during
  * first creation of the Singleton object.
